@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const {getAllBatik} = require("../../controllers/batik")
+const {getAllbatik,postBatik} = require("../../controllers/batik")
 
-
-router.get('/',getAllBatik)
+router.get('/',getAllbatik)
+router.post('/',postBatik)
 
 
 
