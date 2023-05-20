@@ -3,8 +3,7 @@ const Sequelize= require("sequelize")
 
 const batik = db.define("batik",{
     id: {
-        type: Sequelize.INTEGER,
-        autoIncrement: true,
+        type: Sequelize.STRING,
         primaryKey: true
     },
     name:{
