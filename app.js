@@ -6,6 +6,7 @@ var logger = require('morgan');
 const allRoute = require('./routes')
 const db = require('./config/db');
 const batik = require('./model/batik');
+const blog = require('./model/blog');
 // const sequalize = require('sequelize');
 
 // var indexRouter = require('./routes/index');
@@ -24,7 +25,7 @@ app.use(allRoute)
 db.authenticate().then(() => {
     console.log('Connection has been established successfully.');
     db.sync().then(() => {
-        console.log('Batik table created successfully!');
+        console.log('all table created successfully!');
      }).catch((error) => {
         console.error('Unable to create table : ', error);
      });
