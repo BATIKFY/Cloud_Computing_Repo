@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "batikfy-capstone-cloud",
+  "private_key_id": "16dec89056188af3af3fc7015e9e622d3bceef52",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDemuJHBCOtqjFa\nlpxNWI7II0l5Ue6RZIcoUPWE94Xu8L8M6B2yMD84L6sQ9h95IkshFm0qWESxhHHb\nneA2xV/2s2c6gh1UHFMW2Fh6oNDmMrRCFdC/PoXjH1cC5myFczaKnijKm3Fdn07a\ns1y77RsDEi+da28oK57DlojcZGd/wxnMuJUaglRdbmA4ufeF9ejtCR/dusCsR53K\ns/6zIhITdn4+ZFJLY/PrwMLJH1Plh3+zbNeKBFHQhKQNci05jndLroacUBsrL0s6\nycSWE8qLtprBc+w0iilv5NgDTLshrwUAuyf4Zn9ry1e0MoZgO57xtTu1mULJ0Mrc\nH5JhJLlRAgMBAAECggEANzGNAFG47PLheNYWHCFkiaAiNBgKAHe+AVONhLIAvd1o\naXFWB5vp2OsMzdBQvm6v1Rzj5VdsdN1jg7IR6VKn+BnEcx/W2MeLHIN48LLWCPWy\ndx5Em16LwORA5UGvz6jg8Z7Ee3PuOGnrGdPWHuxrwaetMal1Lq8eFt3IwmiMtwL5\nDN4vvOip60NjdKFcT3D0Ao32EsMeXU3Rtp1MvgTakwjnYm+dmvVC9x6lB8dHJz/M\nuDw/IeOcOiWmQz06LBotaftnIcQpXsROZTKwyDeJ9QuJ9sH4vItbmBXIFiNwWRFp\nA0a63KR0qiNFeRjhJFHTEokUr3QE/WSO6iFf7JmAaQKBgQDwubtoE8yN+9Im5zns\nlFHCFvgK5zEcHfbA62+qXMK2Cz4MlVeMoCYPSckdPF8aLQp5Emih4IGH8qpiwJIf\nqMfRqIHjx0LTY9Vbrp6Oj8Qn/VmPi2MdaqdOZtq+CbPQaTFwY8XO025i/sup74FV\ndKsf2WrAO4a1anmLCojMtVb9VQKBgQDsus7pYCglbaZLm90OqDzV5/TLADUylRpk\nVDQGpdP0sX5EuUDS5L1Cm/CKAy/kq6Q3HMRqHzcuglRoX28YiIHfCSm0NufAXQ3W\n+oTGU/GAB3eQ6dzrxLmh2RXR6nsMAGeuRB+vkRoWmmNSu+dPs3S3JKPSWH8r3sjj\naKEJBXJsDQKBgFWPzpq5ntVAknudaCs8tKql+1f0wLHbvJ7pj/Efs119NXrHgizL\np3t7oG4xzSPCqpxJ/MK8x42IpSMgi0+RcCSHHlPVuVzleSpzMIw/cVs9Y53vzzTf\necQWLt2pGS6UlSv7ao2O/QdWxRELvg6fv0s8vgLBpanJxJW1EtagBeFZAoGBAM0d\nvASohYCQtoNSxMJbcYLiXc+7GVz/poOCFiYgbzvYwxCm940EFxzs4wmiY1AejMYY\nDfPpojWRRbO95RP7y5PGa7Uz0bBysHgyTvNNbrZBQg91Iy/CIBolb+uX4Q/wFeYA\nLvg/oLwu/5qDJ5R+aMX7YFr0xRPtEGFCmi2n45HNAoGBAN6Ob+XkOm6cU8th82Rc\nl5V+exh08JNmH4AAPQoQEDWxNW4VaVkfs3XcxL3gDRRcjOIxLaDAUA4S3cwoulUQ\nCCGO4llLvITdIHxcTfmMD8nfbf6X/OgqwKfTNcWtRjGPPEUZMwluARfTvv7BdxTG\nVcJN88GCj10PGViw7A3ob4JP\n-----END PRIVATE KEY-----\n",
+  "client_email": "batikfy-blog-image@batikfy-capstone-cloud.iam.gserviceaccount.com",
+  "client_id": "117388257781609514358",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/batikfy-blog-image%40batikfy-capstone-cloud.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

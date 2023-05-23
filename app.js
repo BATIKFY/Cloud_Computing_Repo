@@ -7,13 +7,22 @@ const allRoute = require('./routes')
 const db = require('./config/db');
 const batik = require('./model/batik');
 const blog = require('./model/blog');
-// const sequalize = require('sequelize');
+const bodyParser = require('body-parser')
+const multer = require('multer')
 
-// var indexRouter = require('./routes/index');
-// var usersRouter = require('./routes/users');
+const app = express()
 
-var app = express();
+const multerMid = multer({
+  storage: multer.memoryStorage(),
+  limits: {
+    fileSize: 5 * 1024 * 1024,
+  },
+})
 
+app.disable('x-powered-by')
+app.use(multerMid.single('file'))
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
