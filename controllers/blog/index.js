@@ -1,5 +1,6 @@
 const nanoid = require("nanoid")
 const blogModel = require("../../model/blog")
+const uploadImage = require("../../helper")
 module.exports = {
     getAllblog : async (req,res)=>{
         try {
@@ -23,10 +24,13 @@ module.exports = {
     },
     postBlog : async (req, res)=>{
         try {
+            const myFile = req.file
+            const url = await uploadImage(myFile)
             const id = nanoid(10)
             const {title,textBlog,source} = req.body
             const blog = await blogModel.create({
                 id,
+                image : url,
                 title,
                 textBlog,
                 source
