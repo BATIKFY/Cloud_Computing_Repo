@@ -34,7 +34,7 @@ module.exports = {
                 title,
                 textBlog,
                 source
-            })
+            })  
 
             return res.status(201).json({
                 status  : res.statusCode,
