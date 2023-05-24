@@ -6,6 +6,9 @@ const batik = db.define("batik",{
         type: Sequelize.STRING,
         primaryKey: true
     },
+    image:{
+        type: Sequelize.STRING
+    },
     name:{
         type: Sequelize.STRING
     },

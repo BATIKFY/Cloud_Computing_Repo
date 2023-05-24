@@ -1,14 +1,18 @@
 const nanoid = require("nanoid")
 const batikModel = require('../../model/batik')
+const uploadImage = require("../../helper")
 
 
 module.exports = {
     postBatik : async (req,res)=>{
         try {
+            const myFile = req.file
+            const url = await uploadImage(myFile)
             const id = nanoid(10)
             const {name, origin, meaning } = req.body;
             const batik = await batikModel.create({
                 id,
+                image:url,
                 name,
                 origin,
                 meaning
