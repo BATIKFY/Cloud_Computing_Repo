@@ -1,13 +1,10 @@
 var express = require('express');
 const router = express.Router()
+const {registerUser} = require('../../controllers/user/register')
 
 
-router.get('/',(req,res)=>{
-    res.json({
-        name:"daffa",
-        passwod:"123"
-    })
-})
+router.post('/login',registerUser)
+// router.use('/signup')
 
 
 module.exports = router
