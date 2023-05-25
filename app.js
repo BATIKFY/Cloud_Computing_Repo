@@ -7,6 +7,7 @@ const allRoute = require('./routes')
 const db = require('./config/db');
 const batik = require('./model/batik');
 const blog = require('./model/blog');
+const user = require('./model/user');
 const bodyParser = require('body-parser')
 const multer = require('multer')
 
