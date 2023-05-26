@@ -1,14 +1,18 @@
+require('dotenv').config()
 const nanoid = require("nanoid")
 const userModel = require("../../../model/user")
+const bycrpt = require('bcryptjs')
 module.exports = {
     registerUser : async (req,res)=>{
         try {
+            const salt = 10
             const id = nanoid(10)
             const {username,password} = req.body
+            const hashedPass = bycrpt.hashSync(password,salt)
             const user = await userModel.create({
                 id,
                 username,
-                password
+                password : hashedPass
             })
             return res.status(201).json({
                 status  : res.statusCode,
