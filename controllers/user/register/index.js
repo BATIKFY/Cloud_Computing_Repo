@@ -7,11 +7,12 @@ module.exports = {
         try {
             const salt = 10
             const id = nanoid(10)
-            const {username,password} = req.body
+            const {name,email,password} = req.body
             const hashedPass = bycrpt.hashSync(password,salt)
             const user = await userModel.create({
                 id,
-                username,
+                name,
+                email,
                 password : hashedPass
             })
             return res.status(201).json({
@@ -31,5 +32,5 @@ module.exports = {
               data: null
             });
         }
-    }
+    }   
 }
