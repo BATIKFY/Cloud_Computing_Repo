@@ -7,17 +7,17 @@ const key = process.env.KEY_HASH
 module.exports = {
     loginUser: async (req,res)=>{
         try {
-            const {username,password} = req.body
+            const {email,password} = req.body
             const user = await userModel.findOne({
                 where :{
-                    username : username,
+                    email : email,
                 }
             });
             if (user != null) {
                 if(bycrpt.compareSync(password,user.password)){
                     let token = {
                         id : user.id,
-                        username : user.username
+                        name : user.name
                     }
                     token = jwt.sign(token,key,{expiresIn:'1d'})
                     return res.status(200).json({
@@ -25,6 +25,7 @@ module.exports = {
                         success: true,
                         message:"login successful",
                         data: {
+                            id : user.id,
                             accessToken : token
                         }
                     })
