@@ -111,7 +111,7 @@
         "image": "STRING",
         "title": "STRING",
         "textBlog": "LONGTEXT",
-        "SOURCE": "STRING",
+        "source": "STRING",
         "createdAt": "DATE",
         "updatedAt": "DATE"
     }
@@ -151,7 +151,8 @@
 - Request Body :
 ```json 
 {
-      "username": "STRING",
+      "name": "STRING",
+      "email": "STRING","
       "password": STRING
 }
 ```
@@ -162,7 +163,11 @@
   "succses" : "true",
   "message" : "new user added",
   "data" : {
-         user,
+         user:{
+             "name": "STRING",
+              "email": "STRING","
+              "password": STRING
+         }
         }
 }
 ```
@@ -172,7 +177,7 @@
 - Request Body : 
 ```json 
 {
-      "username": "STRING",
+      "email": "STRING",
       "password": "STRING"
 }
 ```
@@ -183,8 +188,56 @@
   "success": true,
   "message":"login successful",
   "data": {
+      "id" : "STRING"
       "accessToken" : "token"
       }
 }
 ```
-
+## edit profile user
+- Method : POST
+- Endpoint : `.../auth/profile/:id`
+- Request Body : 
+```json 
+{
+      "name": "STRING",
+      "email": "STRING"
+}
+```
+- Response Body :
+```json 
+{
+ "status": "200",
+ "success": "true",
+ "message": "user updated",
+   "data": {
+        "user": {
+            "name": "STRING",
+            "email": "STRING"
+        },
+     }
+}
+```
+}
+## forget password
+- Method : POST
+- Endpoint : `.../auth/password/:id`
+- Request Body : 
+```json 
+{
+      "password": "STRING"
+}
+```
+- Response Body :
+```json 
+{
+ "status": "200",
+ "success": "true",
+ "message": "user updated",
+   "data": {
+        "user": {
+          "password":"STRING",
+        },
+     }
+}
+```
+}
