@@ -63,8 +63,8 @@
 {
     "file": "FILE.jpg/jpeg",
     "name": "Batik Megamendung",
-        "origin": "Cirebon",
-        "meaning": "Motif Mega Mendung dalam batik memiliki pengaruh dari kultur Tiongkok dengan penggunaan perabotan berbahan keramik China ...",
+    "origin": "Cirebon",
+    "meaning": "Motif Mega Mendung dalam batik memiliki pengaruh dari kultur Tiongkok dengan penggunaan perabotan berbahan keramik China ...",
 }
 ```
 - Respon Body :
@@ -198,12 +198,12 @@
 - Respon Body :
 ```json 
 {
-    "status"  : 200,
+    "status"  : 201,
     "succses" : true,
     "message" : 'new blog added',
     "data" : {
           "blog" : {
-            "image": "FILE.jpg/jpeg",
+            "image": "https://storage.googleapis.com/batikfy-bucket/nadia.jpeg",
             "title": "Batik Kian Diakui Sebagai Aset Mewah yang Berharga",
             "textBlog": "Tak hanya cantik untuk dipakai sebagai penunjang penampilan, batik pun memiliki valuasi tinggi sebagai aset investasi ... ",
             "source": "https://investasi.kontan.co.id/news/batik-kian-diakui-sebagai-aset-mewah-yang-berharga",
@@ -230,9 +230,9 @@
 - Request Body :
 ```json 
 {
-      "name": "STRING",
-      "email": "STRING","
-      "password": STRING
+      "name": "DaffaRadhitya",
+      "email": "daffasven@gmail.com",
+      "password": "Daffa123"
 }
 ```
 - Response Body :
@@ -242,10 +242,10 @@
   "succses" : "true",
   "message" : "new user added",
   "data" : {
-         user:{
-             "name": "STRING",
-              "email": "STRING",
-              "password": "STRING"
+         "user":{
+          "name": "DaffaRadhitya",
+          "email": "daffasven@gmail.com",
+          "password": "Daffa123"
          }
         }
 }
@@ -256,8 +256,8 @@
 - Request Body : 
 ```json 
 {
-      "email": "STRING",
-      "password": "STRING"
+      "email": "daffasven@gmail.com",
+      "password": "Daffa123"
 }
 ```
 - Response Body :
@@ -267,8 +267,8 @@
   "success": true,
   "message":"login successful",
   "data": {
-      "id" : "STRING"
-      "accessToken" : "token"
+      "id": "Hb4nzOi344",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpX..."
       }
 }
 ```
@@ -278,8 +278,8 @@
 - Request Body : 
 ```json 
 {
-      "name": "STRING",
-      "email": "STRING"
+      "name": "DaffaRadhitya11",
+      "email": "dafafasven@gmail.com",
 }
 ```
 - Response Body :
@@ -290,8 +290,8 @@
  "message": "user updated",
    "data": {
         "user": {
-            "name": "STRING",
-            "email": "STRING"
+          "name": "DaffaRadhitya11",
+          "email": "dafafasven@gmail.com",
         },
      }
 }
@@ -303,7 +303,7 @@
 - Request Body : 
 ```json 
 {
-      "password": "STRING"
+      "password": "passBaru"
 }
 ```
 - Response Body :
@@ -314,7 +314,7 @@
  "message": "user updated",
    "data": {
         "user": {
-          "password":"STRING",
+          "password":"passBaru",
         },
      }
 }
