@@ -10,15 +10,25 @@
   "success": true,
   "message": "ok",
   "data": {
-    "batiks": [{
-    "id": "STRING",
-    "image": "STRING",
-    "name": "STRING",
-    "origin": "STRING",
-    "meaning": "STRING",
-    "createdAt": "DATE",
-    "updatedAt": "DATE"
-    }, ...
+    "batiks": [
+      {
+        "id": "5K4FCRjHvg",
+        "image": "https://storage.googleapis.com/batikfy-bucket/megmen.png",
+        "name": "Batik Megamendung",
+        "origin": "Cirebon",
+        "meaning": "Motif Mega Mendung dalam batik memiliki pengaruh dari kultur Tiongkok dengan ...",
+        "createdAt": "2023-06-06T12:14:17.000Z",
+        "updatedAt": "2023-06-06T12:14:17.000Z"
+      },
+      {
+        "id": "A8Mw6oINhr",
+        "image": "https://storage.googleapis.com/batikfy-bucket/sekar.jpg",
+        "name": "Batik Sekar",
+        "origin": "Solo dan Yogyakarta",
+        "meaning": "Batik Sekar Jagad adalah salah satu motif batik yang berasal dari Solo dan Yogyakarta ...",
+        "createdAt": "2023-05-31T03:45:53.000Z",
+        "updatedAt": "2023-05-31T03:45:53.000Z"
+      },
     ]
   }
 }
@@ -34,29 +44,46 @@
   "message": "batik find",
   "data": {
     "batik": {
-        "id": "STRING",
-        "image": "STRING",
-        "name": "STRING",
-        "origin": "STRING",
-        "meaning": "STRING",
-        "createdAt": "DATE",
-        "updatedAt": "DATE"
-    }
+        "id": "5K4FCRjHvg",
+        "image": "https://storage.googleapis.com/batikfy-bucket/megmen.png",
+        "name": "Batik Megamendung",
+        "origin": "Cirebon",
+        "meaning": "Motif Mega Mendung dalam batik memiliki pengaruh dari kultur Tiongkok dengan ...",
+        "createdAt": "2023-06-06T12:14:17.000Z",
+        "updatedAt": "2023-06-06T12:14:17.000Z"
+      }
   }
 }
 ```
-## Update Batik By ID
-- Method : PUT
-- Endpoint : `.../batik/:id`
+## Post Batik By ID
+- Method : POST
+- Endpoint : `.../batik`
+- Request Body :
+```json 
+{
+    "file": "FILE.jpg/jpeg",
+    "name": "Batik Megamendung",
+        "origin": "Cirebon",
+        "meaning": "Motif Mega Mendung dalam batik memiliki pengaruh dari kultur Tiongkok dengan penggunaan perabotan berbahan keramik China ...",
+}
+```
 - Respon Body :
 ```json 
 {
-      "status": 200,
-      "success": true,
-      "message": "batik updated",
-      "data": {
-        "batik": request body
-      }
+    "status"  : 200,
+    "succses" : true,
+    "message" : 'new batik added',
+    "data" : {
+          "batik" : {
+            "id": "5K4FCRjHvg",
+            "image": "https://storage.googleapis.com/batikfy-bucket/megmen.png",
+            "name": "Batik Megamendung",
+            "origin": "Cirebon",
+            "meaning": "Motif Mega Mendung dalam batik memiliki pengaruh dari kultur Tiongkok dengan ...",
+            "createdAt": "2023-06-06T12:14:17.000Z",
+            "updatedAt": "2023-06-06T12:14:17.000Z"
+          }
+     }
 }
 ```
 ## Delete Batik By ID
@@ -83,16 +110,26 @@
   "success": true,
   "message": "ok",
   "data": {
-      "blogs": [{
-      "id": "STRING",
-      "image": "STRING",
-      "title": "STRING",
-      "textBlog": "LONGTEXT",
-      "SOURCE": "STRING",
-      "createdAt": "DATE",
-      "updatedAt": "DATE"
-      }, ...
-    ]
+      "blog": [
+         {
+        "id": "3q8K4znz-m",
+        "image": "https://storage.googleapis.com/batikfy-bucket/artikel1.jpg",
+        "title": "Praktik Soft Diplomacy Indonesia Melalui Batik",
+        "textBlog": "Indonesia adalah negara yang kaya akan keberagaman, baik dari segi budaya, kepercayaan dan latar belakang masyarakat yang berbeda-beda. Indonesia ...",
+        "source": "https://kumparan.com/angelina-eugene/praktik-soft-diplomacy-indonesia-melalui-batik-20PqFKWamPk",
+        "createdAt": "2023-05-31T03:57:56.000Z",
+        "updatedAt": "2023-05-31T03:57:56.000Z"
+      },
+      {
+        "id": "OzBDPjSLDx",
+        "image": "https://storage.googleapis.com/batikfy-bucket/artikel2.jpg",
+        "title": "Batik Kian Diakui Sebagai Aset Mewah yang Berharga",
+        "textBlog": "Tak hanya cantik untuk dipakai sebagai penunjang penampilan, batik pun memiliki valuasi tinggi sebagai aset investasi ... ",
+        "source": "https://investasi.kontan.co.id/news/batik-kian-diakui-sebagai-aset-mewah-yang-berharga",
+        "createdAt": "2023-06-06T12:37:13.000Z",
+        "updatedAt": "2023-06-06T12:37:13.000Z"
+      },
+      ]
   }
 }
 ```
@@ -107,13 +144,13 @@
   "message": "blog find",
   "data": {
     "blog": {
-        "id": "STRING",
-        "image": "STRING",
-        "title": "STRING",
-        "textBlog": "LONGTEXT",
-        "source": "STRING",
-        "createdAt": "DATE",
-        "updatedAt": "DATE"
+         "id": "OzBDPjSLDx",
+        "image": "https://storage.googleapis.com/batikfy-bucket/artikel2.jpg",
+        "title": "Batik Kian Diakui Sebagai Aset Mewah yang Berharga",
+        "textBlog": "Tak hanya cantik untuk dipakai sebagai penunjang penampilan, batik pun memiliki valuasi tinggi sebagai aset investasi ... ",
+        "source": "https://investasi.kontan.co.id/news/batik-kian-diakui-sebagai-aset-mewah-yang-berharga",
+        "createdAt": "2023-06-06T12:37:13.000Z",
+        "updatedAt": "2023-06-06T12:37:13.000Z"
     }
   }
 }
@@ -121,6 +158,15 @@
 ## Update Blog By ID
 - Method : PUT
 - Endpoint : `.../blog/:id`
+- Request Body : 
+```json
+{
+  "image": "FILE.jpg/jpeg",
+   "title": "Batik Kian Diakui Sebagai Aset Mewah yang Berharga",
+   "textBlog": "Tak hanya cantik untuk dipakai sebagai penunjang penampilan, batik pun memiliki valuasi tinggi sebagai aset investasi ... ",
+   "source": "https://investasi.kontan.co.id/news/batik-kian-diakui-sebagai-aset-mewah-yang-berharga",
+}
+```
 - Respon Body :
 ```json 
 {
@@ -128,8 +174,41 @@
       "success": true,
       "message": "blog updated",
       "data": {
-        "blog": request body
+        "blog": {
+          "image": "FILE.jpg/jpeg",
+          "title": "Batik Kian Diakui Sebagai Aset Mewah yang Berharga",
+          "textBlog": "Tak hanya cantik untuk dipakai sebagai penunjang penampilan, batik pun memiliki valuasi tinggi sebagai aset investasi ... ",
+          "source": "https://investasi.kontan.co.id/news/batik-kian-diakui-sebagai-aset-mewah-yang-berharga",,
+        }
       }
+}
+```
+## Post Blog
+- Method : POST
+- Endpoint : `.../blog`
+- Request Body :
+```json 
+{
+    "image": "FILE.jpg/jpeg",
+    "title": "Batik Kian Diakui Sebagai Aset Mewah yang Berharga",
+    "textBlog": "Tak hanya cantik untuk dipakai sebagai penunjang penampilan, batik pun memiliki valuasi tinggi sebagai aset investasi ... ",
+    "source": "https://investasi.kontan.co.id/news/batik-kian-diakui-sebagai-aset-mewah-yang-berharga", 
+}
+```
+- Respon Body :
+```json 
+{
+    "status"  : 200,
+    "succses" : true,
+    "message" : 'new blog added',
+    "data" : {
+          "blog" : {
+            "image": "FILE.jpg/jpeg",
+            "title": "Batik Kian Diakui Sebagai Aset Mewah yang Berharga",
+            "textBlog": "Tak hanya cantik untuk dipakai sebagai penunjang penampilan, batik pun memiliki valuasi tinggi sebagai aset investasi ... ",
+            "source": "https://investasi.kontan.co.id/news/batik-kian-diakui-sebagai-aset-mewah-yang-berharga",
+          }
+     }
 }
 ```
 ## Delete Blog By ID
@@ -165,8 +244,8 @@
   "data" : {
          user:{
              "name": "STRING",
-              "email": "STRING","
-              "password": STRING
+              "email": "STRING",
+              "password": "STRING"
          }
         }
 }
