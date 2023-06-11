@@ -55,7 +55,7 @@
   }
 }
 ```
-## Post Batik By ID
+## Post Batik
 - Method : POST
 - Endpoint : `.../batik`
 - Request Body :
