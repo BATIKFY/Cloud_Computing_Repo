@@ -1,6 +1,8 @@
 const nanoid = require("nanoid")
 const blogModel = require("../../model/blog")
 const uploadImage = require("../../helper")
+const { Sequelize } = require("sequelize")
+const Op = Sequelize.Op
 module.exports = {
     getAllblog : async (req,res)=>{
         try {
@@ -152,6 +154,42 @@ module.exports = {
                 message: "internal server error",
                 data: null
               });
+        }
+    },
+    getBlogKeyword : async (req,res)=>{
+        try {
+            const {keyword} = req.params
+            const data = await blogModel.findAll({
+                where :{
+                    title : {[Op.like]: '%' + keyword + '%'}
+                }
+            });
+            if(data.length <= 0){
+                return res.status(200).json({
+                    status: 200,
+                    success: false,
+                    message: "failed to find blog, cant find the keyword",
+                    data: null
+                  });
+            }else{
+                return res.status(200).json({
+                    status: 200,
+                    success: true,
+                    message: "blog find",
+                    data: {
+                        blog: data,
+                      }
+                  });
+            }
+
+        } catch (error) {
+            console.log(error)
+            return res.status(500).json({
+                status: 500,
+                success: false,
+                message: "internal server error",
+                data: null
+                });
         }
     }
 }

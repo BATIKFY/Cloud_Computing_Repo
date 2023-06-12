@@ -237,6 +237,30 @@
       "message": "blog deleted successfully"
 }
 ```
+## Get Blog By Keyword 
+- Method : GET
+- Endpoint : `.../blog/find/{keyword}`
+- example endpoint : `.../blog/find/mahasiswa`
+- Request Body :
+```json 
+{
+    "status"  : 200,
+    "succses" : true,
+    "message" : 'blog find',
+    "data" : {
+      "blog": [
+            {
+                "id": "JjHp5T0Pc_",
+                "image": "https://storage.googleapis.com/batikfy-bucket/nadia.jpeg",
+                "title": "Keren! Mahasiswa Unair Kenalkan Batik Indonesia di Italia",
+                "textBlog": "Aksi yang dilakukan mahasiswa ...",
+                "createdAt": "2023-06-11T12:36:53.000Z",
+                "updatedAt": "2023-06-11T12:36:53.000Z"
+            }
+        ]
+     }
+}
+```
 # 3. USER
 
 ## Register User

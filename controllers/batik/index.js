@@ -69,6 +69,7 @@ module.exports = {
             });
 
             if(!theBatik){
+                
                 return res.status(200).json({
                     status: 200,
                     success: false,
@@ -163,12 +164,12 @@ module.exports = {
     getBatikKeyword : async (req,res)=>{
         try {
             const {keyword} = req.params
-            const data = await batikModel.findOne({
+            const data = await batikModel.findAll({
                 where :{
                     name : {[Op.like]: '%' + keyword + '%'}
                 }
             });
-            if(!data){
+            if(data.length <= 0){
                 return res.status(200).json({
                     status: 200,
                     success: false,
