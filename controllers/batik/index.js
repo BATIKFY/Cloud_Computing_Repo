@@ -1,6 +1,8 @@
 const nanoid = require("nanoid")
 const batikModel = require('../../model/batik')
 const uploadImage = require("../../helper")
+const { Sequelize } = require("sequelize")
+const Op = Sequelize.Op
 
 
 module.exports = {
@@ -150,6 +152,42 @@ module.exports = {
                   });
             }
         } catch (error) {
+            return res.status(500).json({
+                status: 500,
+                success: false,
+                message: "internal server error",
+                data: null
+                });
+        }
+    },
+    getBatikKeyword : async (req,res)=>{
+        try {
+            const {keyword} = req.params
+            const data = await batikModel.findOne({
+                where :{
+                    name : {[Op.like]: '%' + keyword + '%'}
+                }
+            });
+            if(!data){
+                return res.status(200).json({
+                    status: 200,
+                    success: false,
+                    message: "failed to find batik, cant find the keyword",
+                    data: null
+                  });
+            }else{
+                return res.status(200).json({
+                    status: 200,
+                    success: true,
+                    message: "batik find",
+                    data: {
+                        batik: data,
+                      }
+                  });
+            }
+
+        } catch (error) {
+            console.log(error)
             return res.status(500).json({
                 status: 500,
                 success: false,

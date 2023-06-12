@@ -55,22 +55,37 @@
   }
 }
 ```
-## Post Batik By ID
-- Method : POST
-- Endpoint : `.../batik`
+## Get Batik By Keyword 
+- Method : GET
+- Endpoint : `.../batik/name/{keyword}`
+- example endpoint : `.../batik/name/batik pekalongan` atau `.../batik/name/pekalongan `
 - Request Body :
 ```json 
 {
-    "file": "FILE.jpg/jpeg",
-    "name": "Batik Megamendung",
-    "origin": "Cirebon",
-    "meaning": "Motif Mega Mendung dalam batik memiliki pengaruh dari kultur Tiongkok dengan penggunaan perabotan berbahan keramik China ...",
+    "status"  : 200,
+    "succses" : true,
+    "message" : 'batik find',
+    "data" : {
+          "batik" : {
+            "id": "5K4FCRjHvg",
+            "image": "https://storage.googleapis.com/batikfy-bucket/megmen.png",
+            "name": "Batik Pekalongan",
+            "origin": "Cirebon",
+            "meaning": "Motif Mega Mendung dalam batik memiliki pengaruh dari kultur Tiongkok dengan ...",
+            "createdAt": "2023-06-06T12:14:17.000Z",
+            "updatedAt": "2023-06-06T12:14:17.000Z"
+          }
+     }
 }
 ```
+## Post Batik
+- Method : POST
+- Endpoint : `.../batik`
 - Respon Body :
+
 ```json 
 {
-    "status"  : 200,
+    "status"  : 201,
     "succses" : true,
     "message" : 'new batik added',
     "data" : {
